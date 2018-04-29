@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>прога</title>
+	<style type="text/css">
+		#sprite {
+			position: fixed;
+			left:210px;
+			top:300px;
+		
+		
+		}
+		#a {
+			position: fixed;
+			top:50px;
+			font-size: 50px;
+			left: 580px;
+		}
+		#d {
+			position: fixed;
+			top:50px;
+			font-size: 50px;
+			left: 660px;
+		}
+		#b {
+			position: fixed;
+			top:50px;
+			font-size: 50px;
+			left: 740px;
+		}
+		#s {
+			position: fixed;
+			top:50px;
+			font-size: 50px;
+			left: 620px;
+
+		}
+		#r {
+			position: fixed;
+			top:50px;
+			font-size: 50px;
+			left: 700px;
+		}
+		#input1 {
+			position: fixed;
+			width: 20px;
+			border-radius: 5px;
+			z-index: 3;
+			text-align: center;
+			outline: 0;
+			font-size: 20px;
+
+		
+
+		}
+		#input11 {
+			position: fixed;
+			font-size: 25px;
+		}
+		#input22 {
+			position: fixed;
+			font-size: 25px;
+		}
+
+		
+		#input2 {
+			position: fixed;
+			width: 15px;
+			border-radius: 5px;
+			z-index: 3;
+			text-align: center;
+			font-size: 20px;
+
+		}
+		#input3 {
+			width: 40px;
+			border-radius: 5px;
+			position: fixed;
+			left: 740px;
+			top: 50px; 
+			height: 50px;
+			font-size: 40px;
+			text-align: center;
+			z-index: 3;
+			font-size: 20px;
+		}
+		#canvas {
+			position: fixed;
+			z-index: 1;
+		}
+
+	</style>
+<script src="http://code.jquery.com/jquery-1.11.2.min.js">
+    </script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#input1').toggle();
+	$('#input2').toggle();
+	$('#input3').toggle();
+
+
+	function getRandomInRange(min, max) {   //случайное целое числопогуглил
+                           return Math.floor(Math.random() * (max - min + 1)) + min;
+                      };
+
+	var a = getRandomInRange(6,9);
+	var i=0;
+	var b=0;
+	var c=0;
+	var x=0;
+	var left = 0;
+	
+
+	while (true) {
+		b = getRandomInRange(1,9);
+        c = a+b;
+	    if (c<=14){
+		  if (c>=11){
+		  	document.getElementById("a").innerHTML = a ;
+		  	document.getElementById("d").innerHTML = b ;
+		  	
+		    $('#input1').show(500);
+		   
+
+		   var co=document.getElementById("canvas");
+
+		   if (a==6) {
+		   	document.getElementById("input1").style.top = 200+"px";
+		  	document.getElementById("input1").style.left = 350+"px";
+		  	document.getElementById("input11").style.top = 205+"px";
+		  	document.getElementById("input11").style.left = 355+"px";
+		  	left=(355-240)*2;
+		   	var ctx6=co.getContext("2d");
+            ctx6.beginPath(); 
+            ctx6.moveTo(239,303);           // Create a starting point
+
+            ctx6.quadraticCurveTo(345, 140, 471, 303);
+            x=471;
+
+            ctx6.strokeStyle = "#8b00ff";
+            ctx6.lineWidth = 3;
+            ctx6.stroke(); 
+            ctx6.beginPath();
+            ctx6.moveTo(467,288);
+            ctx6.lineTo(471,303); 
+            ctx6.lineTo(459,298);
+            ctx6.stroke();
+
+		   }
+
+		   else if (a==7) {
+		   	document.getElementById("input1").style.top = 185+"px";
+		  	document.getElementById("input1").style.left = 370+"px";
+		  	document.getElementById("input11").style.top = 190+"px";
+		  	document.getElementById("input11").style.left = 375+"px";
+		  	left = (370-240)*2;
+		   	var ctx7=co.getContext("2d");
+            ctx7.beginPath(); 
+            ctx7.moveTo(239,303);           // Create a starting point
+
+            ctx7.quadraticCurveTo(365, 110, 510, 303);
+            x=510;
+
+            ctx7.strokeStyle = "#8b00ff";
+            ctx7.lineWidth = 3;
+            ctx7.stroke(); 
+            ctx7.beginPath();
+            ctx7.moveTo(507,288);
+            ctx7.lineTo(510,303); 
+            ctx7.lineTo(500,298);
+            ctx7.stroke();
+
+		   }
+		   else if (a==8) {
+		   	document.getElementById("input1").style.top = 170+"px";
+		  	document.getElementById("input1").style.left = 390+"px";
+		  	document.getElementById("input11").style.top = 175+"px";
+		  	document.getElementById("input11").style.left = 395+"px";
+		  	left=(390-240)*2;
+		   	var ctx8=co.getContext("2d");
+            ctx8.beginPath(); 
+            ctx8.moveTo(239,303);           // Create a starting point
+
+            ctx8.quadraticCurveTo(395, 80, 550, 303);
+            x=550;
+
+            ctx8.strokeStyle = "#8b00ff";
+            ctx8.lineWidth = 3;
+            ctx8.stroke(); 
+            ctx8.beginPath();
+            ctx8.moveTo(548,290);
+            ctx8.lineTo(550,303); 
+            ctx8.lineTo(536,295);
+            ctx8.stroke();  
+
+
+		   }
+		   else if (a==9) {
+		   	document.getElementById("input1").style.top = 155+"px";
+		  	document.getElementById("input1").style.left = 410+"px";
+		  	document.getElementById("input11").style.top = 155+"px";
+		  	document.getElementById("input11").style.left = 415+"px";
+		  	left=(410-240)*2;
+		   	var ctx9=co.getContext("2d");
+            ctx9.beginPath(); 
+            ctx9.moveTo(239,303);           // Create a starting point
+ 
+            ctx9.quadraticCurveTo(420, 50, 588, 303);
+            x=588;
+
+            ctx9.strokeStyle = "#8b00ff";
+            ctx9.lineWidth = 3;
+            ctx9.stroke(); 
+            ctx9.beginPath();
+            ctx9.moveTo(586,290);
+            ctx9.lineTo(588,303); 
+            ctx9.lineTo(574,295);
+            ctx9.stroke(); 
+
+
+		   }
+	break;
+		  	            
+		  			}
+		  		}
+		  	};
+		  	
+		  	
+$('#input1').on('input', function() {
+   
+    var w = $(this).val();
+    w = Number.parseInt(w);
+    if (w==a){
+    	
+		$('.input1').toggle(5);
+		$('.input11').append(a);
+
+    	$('#input2').show(500);
+    	document.getElementById("a").style.backgroundColor = '#0000';
+    	if (b==2) {
+    		document.getElementById("input2").style.top = 250+"px";
+		  	document.getElementById("input2").style.left = 285+left+"px";
+		  	document.getElementById("input22").style.top = 255+"px";
+		  	document.getElementById("input22").style.left = 290+left+"px";
+    		var ctx2=co.getContext("2d");
+            ctx2.beginPath(); 
+            ctx2.moveTo(x,303);           // Create a starting point
+
+            ctx2.quadraticCurveTo(280-239+x, 240, 315-239+x, 303);
+        
+            ctx2.strokeStyle = "#8b00ff";
+            ctx2.stroke(); 
+            ctx2.beginPath();
+            ctx2.moveTo(312-239+x,288);
+            ctx2.lineTo(315-239+x,303); 
+            ctx2.lineTo(300-239+x,293);
+            ctx2.stroke();  
+
+    	}
+    	else if (b==3) {
+    		document.getElementById("input2").style.top = 235+"px";
+		  	document.getElementById("input2").style.left = 305+left+"px";
+		  	document.getElementById("input22").style.top = 240+"px";
+		  	document.getElementById("input22").style.left = 310+left+"px";
+    		var ctx3=co.getContext("2d");
+            ctx3.beginPath(); 
+            ctx3.moveTo(x,303);           // Create a starting point
+            ctx3.quadraticCurveTo((300-239)+x, 210, (355-239)+x, 303);
+
+       
+            ctx3.stroke(); 
+            ctx3.beginPath();
+            ctx3.moveTo(352-239+x,289);
+            ctx3.lineTo(353-239+x,303);
+            ctx3.lineTo(342-239+x,294);
+            ctx3.stroke(); 
+
+    	}
+    	else if (b==4) {
+    		document.getElementById("input2").style.top = 225+"px";
+		  	document.getElementById("input2").style.left = 325+left+"px";
+		  	document.getElementById("input22").style.top = 230+"px";
+		  	document.getElementById("input22").style.left = 330+left+"px";
+    		var ctx4=co.getContext("2d");
+            ctx4.beginPath(); 
+            ctx4.moveTo(x,303);           // Create a starting point
+
+            ctx4.quadraticCurveTo(320-239+x, 190, 393-239+x, 303);
+
+            ctx4.strokeStyle = "#8b00ff";
+            ctx4.stroke(); 
+            ctx4.beginPath();
+            ctx4.moveTo(388-239+x,288);
+            ctx4.lineTo(393-239+x,303); 
+            ctx4.lineTo(381-239+x,298);
+            ctx4.stroke(); 
+
+    	}
+    	else if (b==5) {
+    		document.getElementById("input2").style.top = 215+"px";
+		  	document.getElementById("input2").style.left = 345+left+"px";
+		  	document.getElementById("input22").style.top = 220+"px";
+		  	document.getElementById("input22").style.left = 350+left+"px";
+    		var ctx5=co.getContext("2d");
+            ctx5.beginPath(); 
+            ctx5.moveTo(x,303);           // Create a starting point
+
+            ctx5.quadraticCurveTo(335-239+x, 170, 432-239+x, 303);
+
+            ctx5.strokeStyle = "#8b00ff";
+            ctx5.stroke(); 
+            ctx5.beginPath();
+            ctx5.moveTo(428-239+x,288);
+            ctx5.lineTo(432-239+x,303); 
+            ctx5.lineTo(420-239+x,297);
+            ctx5.stroke(); 
+
+    	}
+    	else if (b==6) {
+    		document.getElementById("input2").style.top = 200+"px";
+		  	document.getElementById("input2").style.left = 365+left+"px";
+		  	document.getElementById("input22").style.top = 205+"px";
+		  	document.getElementById("input22").style.left = 370+left+"px";
+    		var ctx6=co.getContext("2d");
+            ctx6.beginPath(); 
+            ctx6.moveTo(x,303);           // Create a starting point
+
+            ctx6.quadraticCurveTo(355-239+x, 140, 471-239+x, 303);
+
+            ctx6.strokeStyle = "#8b00ff";
+            ctx6.stroke(); 
+            ctx6.beginPath();
+            ctx6.moveTo(467-239+x,288);
+            ctx6.lineTo(471-239+x,303); 
+            ctx6.lineTo(459-239+x,298);
+            ctx6.stroke();
+
+    	}
+    	else if (b==7) {
+    		document.getElementById("input2").style.top = 185+"px";
+		  	document.getElementById("input2").style.left = 385+left+"px";
+		  	document.getElementById("input22").style.top = 190+"px";
+		  	document.getElementById("input22").style.left = 390+left+"px";
+    		var ctx7=co.getContext("2d");
+            ctx7.beginPath(); 
+            ctx7.moveTo(x,303);           // Create a starting point
+
+            ctx7.quadraticCurveTo(370-239+x, 110, 510-239+x, 303);
+
+            ctx7.strokeStyle = "#8b00ff";
+            ctx7.stroke(); 
+            ctx7.beginPath();
+            ctx7.moveTo(507-239+x,288);
+            ctx7.lineTo(510-239+x,303); 
+            ctx7.lineTo(500-239+x,298);
+            ctx7.stroke();
+
+    	}
+    	else if (b==8) {
+    		document.getElementById("input2").style.top = 170+"px";
+		  	document.getElementById("input2").style.left = 400+left+"px";
+		  	document.getElementById("input22").style.top = 175+"px";
+		  	document.getElementById("input22").style.left = 405+left+"px";
+    		var ctx8=co.getContext("2d");
+            ctx8.beginPath(); 
+            ctx8.moveTo(x,303);           // Create a starting point
+
+            ctx8.quadraticCurveTo(395-239+x, 80, 550-239+x, 303);
+
+            ctx8.strokeStyle = "#8b00ff";
+            ctx8.stroke(); 
+            ctx8.beginPath();
+            ctx8.moveTo(548-239+x,290);
+            ctx8.lineTo(550-239+x,303); 
+            ctx8.lineTo(536-239+x,295);
+            ctx8.stroke(); 
+
+    	}
+    	
+
+    }
+    else{
+    	document.getElementById("a").style.backgroundColor = '#FF0000';
+    }
+});
+$('#input2').on('input', function() {
+	var z = $(this).val();
+	z = Number.parseInt(z);
+	if (z==b){
+		$('#b').toggle();
+		$('.input2').toggle(5);
+		$('.input22').append(b);
+		
+		$('#input3').show(500);
+		document.getElementById("d").style.backgroundColor = '#0000';
+
+
+	}
+	else{
+    	document.getElementById("d").style.backgroundColor = '#FF0000';
+    }
+	});
+
+$('#input3').on('input', function() {
+	var ot = $(this).val();
+	ot = Number.parseInt(ot);
+
+	if (ot==c){
+	    $('#input3').toggle();
+	    document.getElementById("b").innerHTML = c;
+	    $('#b').show();
+	}
+	else{
+		document.getElementById("input3").style.color = '#FF0000';
+
+	}
+
+});
+
+	
+	});
+
+	
+</script>
+<script type="text/javascript">
+	
+</script>
+<body>
+	<div id="vsum">
+		<span id='a'></span><span id='s'>+</span><span id='d'></span><span id='r'> = </span><span id="b"> ? </span>
+		
+	</div>
+	
+
+
+	<p id='2'>
+		<div >
+			<input type="text" id='input1' class="input1" maxlength="1">
+			<span id='input11' class='input11'></span>
+		</div>
+		<div>
+			<input type="text" id='input2' class='input2' maxlength="1">
+			<span id='input22' class='input22'></span>
+
+			
+		</div>
+		
+		<input type="text" id='input3' maxlength="2">
+		<canvas id="canvas" width="1000" height="1000" ></canvas>
+
+		<img id="sprite" src="sprite.png" alt="Письма мастера дзен">
+	</p>
+
+</body>
+</html>
